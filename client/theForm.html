@@ -1,0 +1,20 @@
+<template name="theForm">
+  {{#autoForm schema=schema id="TheForm" validation="submitThenKeyup" doc=thedoc class=classes}}
+
+    {{> afQuickField name='name'}}
+    {{> afQuickField name='type'}}
+    {{> afQuickField name='nope'}}
+
+    {{#if buttons}}
+      <div class="pull-right">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    {{/if}}
+
+    {{#if extra}}
+      {{> UI.contentBlock}}
+    {{/if}}
+
+  {{/autoForm}}
+</template>
+
